@@ -1,0 +1,45 @@
+<HTML>
+    <HEAD>
+        <TITLE>Kalkulator Sederhana</TITLE>
+    </HEAD>
+    <BODY>
+        <H1>Kalkulator Sederhana</H1>
+        <SCRIPT LANGUAGE="JavaScript">
+            //<!-
+            document.write("Dimodifikasi terakhir pada " + document.lastModified);
+
+            function tambah(){
+                var T1 = document.kalkulator.T1.value
+                var T2 = document.kalkulator.T2.value
+                var T3 = parseInt(T1) + parseInt(T2)
+                document.kalkulator.T3.value = T3
+            }
+            function kurang(){
+                var T1 = document.kalkulator.T1.value
+                var T2 = document.kalkulator.T2.value
+                var T3 = parseInt(T1) - parseInt(T2)
+                document.kalkulator.T3.value = T3
+            }
+            function kali(){
+                var T1 = document.kalkulator.T1.value
+                var T2 = document.kalkulator.T2.value
+                var T3 = parseInt(T1) * parseInt(T2)
+                document.kalkulator.T3.value = T3
+            }
+            function bagi(){
+                var T1 = document.kalkulator.T1.value
+                var T2 = document.kalkulator.T2.value
+                var T3 = parseInt(T1) / parseInt(T2)
+                document.kalkulator.T3.value = T3
+            }
+            //->
+        </SCRIPT>
+
+        <FORM name="kalkulator">
+            <p>Bilangan 1 : <input type="text" name="T1" size="20"> </p>
+            <p>Bilangan 2 : <input type="text" name="T2" size="20"> </p>
+            <p><input type="button" value="+" onclick="tambah()"> <input type="button" value="-" onclick="kurang()"> <input type="button" value="*" onclick="kali()"> <input type="button" value="/" onclick="bagi()"> </p>
+            <p>Hasil &emsp; &nbsp; &nbsp; : <input type="text" name="T3">  </p>
+        </FORM>
+    </BODY>
+</HTML>
